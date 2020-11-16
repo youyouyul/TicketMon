@@ -24,6 +24,10 @@ app.get('/', (req, res) => {
   res.send('Hello World!!!!!!!')
 })
 
+app.get('/api/hello', (req, res) => {
+  res.send('Hello!!!!!!!')
+})
+
 // 회원가입
 app.post('/api/members/register', (req, res) => {
   const member = new Member(req.body)
@@ -38,7 +42,7 @@ app.post('/api/members/register', (req, res) => {
 // 로그인
 app.post('/api/members/login', (req, res) => {
   // 회원가입된 사용자인지 확인
-  Member.findOne({ userName: req.body.userName }, (err, member) => {
+  Member.findOne({ username: req.body.username }, (err, member) => {
     if (!member) {
       return res.json({
         loginSuccess: false,
@@ -49,7 +53,7 @@ app.post('/api/members/login', (req, res) => {
     // 존재하는 사용자면 비밀번호 확인
     member.comparePassword(req.body.password, (err, isMatch) => {
       if (!isMatch)
-        return res.json({ loginSuccess: false, message: "비밀번호가 틀렸습니다."})
+        return res.json({ loginSuccess: false, message: "비밀번호가 틀렸습니다." })
 
       // 비밀번호가 맞으면 토큰 생성
       member.generateToken((err, member) => {

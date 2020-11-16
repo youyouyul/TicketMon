@@ -4,7 +4,7 @@ const saltRounds = 10
 const jwt = require('jsonwebtoken')
 
 const memberSchema = mongoose.Schema({
-    userName: {
+    username: {
         type: String,
         minlength: 2,
         maxlength: 10
