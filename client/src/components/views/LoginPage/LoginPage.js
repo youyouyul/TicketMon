@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { useDispatch } from 'react-redux'
 import { loginUser } from '../../../_actions/member_action'
+import { withRouter } from 'react-router-dom'
 
 function LoginPage(props) {
     const dispatch = useDispatch()
@@ -41,12 +42,10 @@ function LoginPage(props) {
                 <input type="password" value={Password} onChange={onPasswordHandler} />
                 
                 <br />
-                <button type="submit">
-                    로그인
-                </button>
+                <button type="submit"> 로그인 </button>
             </form>
         </div>
     )
 }
 
-export default LoginPage
+export default withRouter(LoginPage)

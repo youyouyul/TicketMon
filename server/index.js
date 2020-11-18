@@ -71,7 +71,8 @@ app.post('/api/members/login', (req, res) => {
 app.get('/api/members/auth', auth, (req, res) => {
   // 미들웨어를 통과해 왔으므로 auth가 확인된 상태
   res.status(200).json({
-    _id: req.member._id
+    _id: req.member._id,
+    username: req.member.username
   })
 })
 
@@ -79,6 +80,7 @@ app.get('/api/members/auth', auth, (req, res) => {
 app.get('/api/members/logout', auth, (res, req) => {
   Member.findOneAndUpdate(
     { _id: req.member._id }, { token: ""}, // 토큰 초기화
+    
     (err, member) => {
       if (err) return res.json({ success: false, err })
       return res.status(200).send({ success: true})

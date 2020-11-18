@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { useDispatch } from 'react-redux'
 import { registerUser } from '../../../_actions/member_action'
+import { withRouter } from 'react-router-dom'
 
 function RegisterPage(props) {
     const dispatch = useDispatch()
@@ -52,12 +53,10 @@ function RegisterPage(props) {
                 <input type="password" value={ConfirmPassword} onChange={onConfirmPasswordHandler} />
                 
                 <br />
-                <button type="submit">
-                    회원가입
-                </button>
+                <button type="submit"> 회원가입 </button>
             </form>
         </div>
     )
 }
 
-export default RegisterPage
+export default withRouter(RegisterPage)

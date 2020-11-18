@@ -2,7 +2,6 @@ const { Member } = require("../models/Member")
 
 let auth = (req, res, next) => {
     // 인증 처리
-    
     // 클라이언트 쿠키에서 토큰 가져오기
     let token = req.cookies.x_auth
 
