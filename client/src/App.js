@@ -5,9 +5,9 @@ import {
   Route
 } from "react-router-dom";
 
-import LandingPage from './components/views/LandingPage/LandingPage'
-import LoginPage from './components/views/LoginPage/LoginPage'
-import RegisterPage from './components/views/RegisterPage/RegisterPage'
+import LandingPage from './components/user/LandingPage/LandingPage'
+import LoginPage from './components/user/LoginPage/LoginPage'
+import RegisterPage from './components/user/RegisterPage/RegisterPage'
 import Auth from './hoc/auth'
 
 function App() {
