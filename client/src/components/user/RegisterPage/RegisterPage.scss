@@ -1,9 +1,9 @@
-.wrap_login {
+.wrap {
     min-height: 100%;
     min-width: 550px !important;
 }
 
-.login_header {
+.header {
     position: relative;
     width: 550px;
     margin: 0 auto;
@@ -12,7 +12,7 @@
     text-align: center;
 }
 
-.login_input_area {
+.input_area {
     width: 390px;
     margin: 0 auto;
     padding: 29px 0 23px 0;
@@ -30,30 +30,5 @@
     border: 1px solid #ccc;
     line-height: 49px;
     box-shadow: none;
-}
-
-.id_input {
-    border-bottom: 0;
-}
-
-.wrap_login_info {
-    float: right;
-    margin-right: -3px;
-    font-size: 12px;
-    font-family: "돋움","Dotum","Apple Gothic",sans-serif;
-}
-
-.wrap_login_info .bar {
-    color: #ebebeb;
-}
-
-.wrap_login_info a {
-    display: inline-block;
-    padding: 5px 2px;
-    color: #767676;
-    text-decoration: none;
-}
-
-.wrap_login_info a.first_child {
-    padding-left: 0;
+    margin-bottom: 15px;
 }

@@ -4,6 +4,7 @@ import { loginUser } from '../../../_actions/member_action'
 import { withRouter } from 'react-router-dom'
 import Button from '../../Button/Button'
 import './LoginPage.scss'
+import Logo from '../../../resources/ticketmon_logo.png'
 
 function LoginPage(props) {
     const dispatch = useDispatch()
@@ -35,17 +36,27 @@ function LoginPage(props) {
     }
 
     return (
-        <div className="LoginPage">
-            <form style={{ display: 'flex', flexDirection: 'column'}} onSubmit={onSubmitHandler}>
-                <label>User Name</label>
-                <input type="text" value={Username} onChange={onUsernameHandler} />
-                
-                <label>Password</label>
-                <input type="password" value={Password} onChange={onPasswordHandler} />
-                
-                <br />
-                <Button type="submit" size="large" color="orange" fullWidth>로그인</Button>
-            </form>
+        <div className="wrap_login">
+            <div className="login_header">
+                <a href="/" title="TicketMon 메인"><img src={Logo} width="300px" alt="TicketMon" /></a>
+            </div>
+            <div className="login_input_area">
+                <form style={{ display: 'flex', flexDirection: 'column'}} onSubmit={onSubmitHandler}>
+                    <input type="text" value={Username} onChange={onUsernameHandler} className="text_input id_input" placeholder="아이디" />
+                    <input type="password" value={Password} onChange={onPasswordHandler} className="text_input" placeholder="비밀번호" />
+                    <div>
+                        <div className="wrap_login_info">
+                            <a title="아이디 찾기" className="first_child">아이디 찾기</a>
+                            <span className="bar">|</span>
+                            <a title="비밀번호 찾기">비밀번호 찾기</a>
+                            <span className="bar">|</span>
+                            <a href="/register" title="회원가입">회원가입</a>
+                        </div>
+                    </div>
+                    <br />
+                    <Button type="submit" size="large" color="orange" fullWidth>로그인</Button>
+                </form>
+            </div>
         </div>
     )
 }

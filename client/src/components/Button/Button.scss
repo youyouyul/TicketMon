@@ -27,12 +27,14 @@ $orange: #f3aa51;
     color: white;
     font-weight: bold;
     outline: none;
-    border-radius: 4px;
     border: none;
     cursor: pointer;
     vertical-align: middle;
+
+    &.round {
+        border-radius: 4px;
+    }
   
-    // 사이즈 관리
     &.large {
       height: 3rem;
       padding-left: 1rem;
