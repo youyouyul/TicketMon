@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import styles from './NavBar.module.scss'
 import Logo from '../../../resources/ticketmon_logo.png'
-import classNames from 'classnames/bind';
+import classNames from 'classnames/bind'
 import Button from '../../Button/Button'
+import axios from 'axios'
 
 const cx = classNames.bind(styles);
 
-function NavBar() {
+function NavBar(props) {
     const [isActive, setNav] = (useState(false))
     const toggleNav = () => {
         setNav(isActive => !isActive)
@@ -16,6 +17,16 @@ function NavBar() {
     const searchHandler = (e) => {
         setSearchQuery(e.currentTarget.value)
     }
+
+    const logoutHandler = () => {
+        axios.get('/api/members/logout').then(response => {
+          if (response.data.success) {
+            props.history.push('/login')
+          } else {
+            alert('로그아웃 실패')
+          }
+        })
+      }
 
     return (
         <nav className={styles.navbar}>
@@ -32,7 +43,7 @@ function NavBar() {
             </div>
             <ul id="nav_user" className={cx('nav_user', isActive ? 'active' : '')}>
                 <li className={styles.nav_item}><a href="/mypage" className={styles.nav}>마이페이지</a></li>
-                <li className={styles.nav_item}><a href="/logout" className={styles.nav}>로그아웃</a></li>
+                <li className={styles.nav_item}><a href="/logout" className={styles.nav} onClick={logoutHandler}>로그아웃</a></li>
                 <li className={styles.nav_item}><a href="/login" className={styles.nav}>로그인</a></li>
             </ul>
             <a href="#" className={styles.nav_toggleBtn} onClick={toggleNav}>#</a>

@@ -1,5 +1,5 @@
 :root {
-    --white-color: #f0f4f5;
+    --white-color: floralwhite;
     --orange-color: #f3aa51;
     --gray-color: gray;
 }
@@ -67,7 +67,7 @@ a {
 .nav_user {
     display: flex;
     list-style: none;
-    padding-left: 0;
+    padding-left: 100px;
 }
 
 .nav_user li {
