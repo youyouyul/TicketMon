@@ -1,4 +1,6 @@
 .wrap {
+    display: flex;
+    flex-direction: column;
     min-height: 100%;
     min-width: 550px !important;
 }
@@ -12,7 +14,9 @@
     text-align: center;
 }
 
-.input_area {
+.form {
+    display: flex;
+    flex-direction: column;
     width: 390px;
     margin: 0 auto;
     padding: 29px 0 23px 0;
@@ -37,8 +41,9 @@
 }
 
 .wrap_info {
-    float: right;
-    margin-right: -3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 12px;
     font-family: "돋움","Dotum","Apple Gothic",sans-serif;
 }

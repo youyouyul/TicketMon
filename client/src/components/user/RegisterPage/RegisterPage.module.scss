@@ -12,7 +12,9 @@
     text-align: center;
 }
 
-.input_area {
+.form {
+    display: flex;
+    flex-direction: column;
     width: 390px;
     margin: 0 auto;
     padding: 29px 0 23px 0;
