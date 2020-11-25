@@ -3,8 +3,11 @@ import { useDispatch } from 'react-redux'
 import { loginUser } from '../../../_actions/member_action'
 import { withRouter } from 'react-router-dom'
 import Button from '../../Button/Button'
-import './LoginPage.scss'
+import styles from './LoginPage.module.scss'
 import Logo from '../../../resources/ticketmon_logo.png'
+import classNames from 'classnames/bind';
+
+const cx = classNames.bind(styles);
 
 function LoginPage(props) {
     const dispatch = useDispatch()
@@ -36,20 +39,20 @@ function LoginPage(props) {
     }
 
     return (
-        <div className="wrap_login">
-            <div className="login_header">
+        <div className={styles.wrap}>
+            <div className={styles.header}>
                 <a href="/" title="TicketMon 메인"><img src={Logo} width="300px" alt="TicketMon" /></a>
             </div>
-            <div className="login_input_area">
+            <div className={styles.input_area}>
                 <form style={{ display: 'flex', flexDirection: 'column'}} onSubmit={onSubmitHandler}>
-                    <input type="text" value={Username} onChange={onUsernameHandler} className="text_input id_input" placeholder="아이디" />
-                    <input type="password" value={Password} onChange={onPasswordHandler} className="text_input" placeholder="비밀번호" />
+                    <input type="text" value={Username} onChange={onUsernameHandler} className={cx('text_input', 'id_input')} placeholder="아이디" />
+                    <input type="password" value={Password} onChange={onPasswordHandler} className={styles.text_input} placeholder="비밀번호" />
                     <div>
-                        <div className="wrap_login_info">
-                            <a title="아이디 찾기" className="first_child">아이디 찾기</a>
-                            <span className="bar">|</span>
+                        <div className={styles.wrap_info}>
+                            <a title="아이디 찾기" className={styles.first_child}>아이디 찾기</a>
+                            <span className={styles.bar}>|</span>
                             <a title="비밀번호 찾기">비밀번호 찾기</a>
-                            <span className="bar">|</span>
+                            <span className={styles.bar}>|</span>
                             <a href="/register" title="회원가입">회원가입</a>
                         </div>
                     </div>

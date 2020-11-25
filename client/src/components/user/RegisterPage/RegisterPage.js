@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { registerUser } from '../../../_actions/member_action'
 import { withRouter } from 'react-router-dom'
 import Button from '../../Button/Button'
-import './RegisterPage.scss'
+import styles from './RegisterPage.module.scss'
 import Logo from '../../../resources/ticketmon_logo.png'
 
 function RegisterPage(props) {
@@ -44,15 +44,15 @@ function RegisterPage(props) {
     }
 
     return (
-        <div className="wrap">
-            <div className="login_header">
+        <div className={styles.wrap}>
+            <div className={styles.header}>
                 <a href="/" title="TicketMon 메인"><img src={Logo} width="300px" alt="TicketMon" /></a>
             </div>
-            <div className="input_area">
+            <div className={styles.input_area}>
                 <form style={{ display: 'flex', flexDirection: 'column'}} onSubmit={onSubmitHandler}>
-                    <input type="text" value={Username} onChange={onUsernameHandler} className="text_input" placeholder="아이디" />
-                    <input type="password" value={Password} onChange={onPasswordHandler} className="text_input" placeholder="비밀번호" />
-                    <input type="password" value={ConfirmPassword} onChange={onConfirmPasswordHandler} className="text_input" placeholder="비밀번호 확인" />
+                    <input type="text" value={Username} onChange={onUsernameHandler} className={styles.text_input} placeholder="아이디" />
+                    <input type="password" value={Password} onChange={onPasswordHandler} className={styles.text_input} placeholder="비밀번호" />
+                    <input type="password" value={ConfirmPassword} onChange={onConfirmPasswordHandler} className={styles.text_input} placeholder="비밀번호 확인" />
                     <br />
                     <Button type="submit" size="large" color="orange" fullWidth>회원가입</Button>
                 </form>
