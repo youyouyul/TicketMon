@@ -41,20 +41,20 @@ function LoginPage(props) {
     return (
         <div className={styles.wrap}>
             <div className={styles.header}>
-                <a href="/" title="TicketMon 메인"><img src={Logo} width="300px" alt="TicketMon" /></a>
+                <a href='/' title='TicketMon 메인'><img src={Logo} width='300px' alt='TicketMon' /></a>
             </div>
             <form className={styles.form} onSubmit={onSubmitHandler}>
-                <input type="text" value={Username} onChange={onUsernameHandler} className={cx('text_input', 'id_input')} placeholder="아이디" />
-                <input type="password" value={Password} onChange={onPasswordHandler} className={styles.text_input} placeholder="비밀번호" />
+                <input type='text' value={Username} onChange={onUsernameHandler} className={cx('text_input', 'id_input')} placeholder='아이디' />
+                <input type='password' value={Password} onChange={onPasswordHandler} className={styles.text_input} placeholder='비밀번호' />
                 <br />
-                <Button type="submit" size="large" color="orange" fullWidth>로그인</Button>
+                <Button type='submit' size='large' color='orange' fullWidth>로그인</Button>
             </form>
             <div className={styles.wrap_info}>
-                <a title="아이디 찾기" className={styles.first_child}>아이디 찾기</a>
+                <a href='/findId' title='아이디 찾기' className={styles.first_child}>아이디 찾기</a>
                 <span className={styles.bar}>|</span>
-                <a title="비밀번호 찾기">비밀번호 찾기</a>
+                <a href='findPwd' title='비밀번호 찾기'>비밀번호 찾기</a>
                 <span className={styles.bar}>|</span>
-                <a href="/register" title="회원가입">회원가입</a>
+                <a href='/register' title='회원가입'>회원가입</a>
             </div>
         </div>
     )
