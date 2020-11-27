@@ -1,11 +1,11 @@
 import React from 'react'
 
-function AdminDashboard() {
+function AdminMgmt({type}) {
     return (
         <div>
-            
+            AdminMgmt
         </div>
     )
 }
 
-export default AdminDashboard
+export default AdminMgmt
