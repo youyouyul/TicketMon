@@ -1,6 +1,6 @@
 import React from 'react'
 
-function AdminDashboard() {
+function AuthPage() {
     return (
         <div>
             
@@ -8,4 +8,4 @@ function AdminDashboard() {
     )
 }
 
-export default AdminDashboard
+export default AuthPage
