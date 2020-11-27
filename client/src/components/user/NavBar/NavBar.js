@@ -34,17 +34,17 @@ function NavBar(props) {
                 <a href="/" title="TicketMon 메인"><img src={Logo} height="60px" alt="TicketMon"/></a>
             </div>
             <ul id="nav_menu" className={cx('nav_menu', isActive ? 'active' : '')}>
-                <li className={styles.nav_item}><a href="/concert" className={styles.nav}>공연</a></li>
-                <li className={styles.nav_item}><a href="/trade" className={styles.nav}>거래</a></li>
+                <li><a href="/concert">공연</a></li>
+                <li><a href="/trade">거래</a></li>
             </ul>
             <div className={styles.nav_search}>
                 <input type="text" value={SearchQuery} onChange={searchHandler} className={cx('text_input')}/>
                 <Button color='orange' size='none'>검색</Button>
             </div>
             <ul id="nav_user" className={cx('nav_user', isActive ? 'active' : '')}>
-                <li className={styles.nav_item}><a href="/mypage" className={styles.nav}>마이페이지</a></li>
-                <li className={styles.nav_item}><a href="/logout" className={styles.nav} onClick={logoutHandler}>로그아웃</a></li>
-                <li className={styles.nav_item}><a href="/login" className={styles.nav}>로그인</a></li>
+                <li><a href="/mypage">마이페이지</a></li>
+                <li><a href="/logout" onClick={logoutHandler}>로그아웃</a></li>
+                <li><a href="/login">로그인</a></li>
             </ul>
             <a href="#" className={styles.nav_toggleBtn} onClick={toggleNav}>#</a>
         </nav>

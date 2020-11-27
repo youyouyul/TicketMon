@@ -1,0 +1,68 @@
+.post {
+    position: relative;
+    display: block;
+    width: 180px;
+    height: 358px;
+    padding: 24px 24px 21px;
+    border: 1px solid #eee;
+}
+
+.thumbnail {
+    display: block;
+    position: relative;
+    width: 180px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.frame {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 178px;
+    height: 248px;
+    background: none;
+    z-index: 10;
+    border: 1px solid #000;
+    opacity: 0.03;
+}
+
+.title {
+    display: block;
+    overflow: hidden;
+    height: 20px;
+    padding: 5px 0 0;
+    font-size: 16px;
+    line-height: 20px;
+    color: #333;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.subject {
+    display: block;
+    overflow: hidden;
+    height: 18px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #666;
+    text-overflow: ellipsis;
+    text-align: center;
+    padding-top: 13px;
+}
+
+.type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.poster {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}

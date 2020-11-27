@@ -1,15 +1,5 @@
-:root {
-    --white-color: floralwhite;
-    --orange-color: #f3aa51;
-    --gray-color: gray;
-}
-
 body {
     margin: 0;
-}
-
-a {
-    text-decoration: none;
 }
 
 .navbar {
@@ -17,6 +7,10 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 8px 12px;
+}
+
+.navbar a {
+    text-decoration: none;
 }
 
 .nav_menu {
@@ -32,7 +26,7 @@ a {
 .nav_menu a {
     color: var(--orange-color);
     font-size: large;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 .nav_menu li:hover {
@@ -76,7 +70,7 @@ a {
 
 .nav_user a {
     color: var(--gray-color);;
-    font-size: medium;
+    font-size: small;
     font-weight: bold;
 }
 

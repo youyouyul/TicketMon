@@ -62,6 +62,13 @@ $orange: #f3aa51;
     padding-right: 1rem;
   }
 
+  &.x-small {
+    height: 1.5rem;
+    font-size: 0.7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   &.blue {
     @include button-color($blue);
   }

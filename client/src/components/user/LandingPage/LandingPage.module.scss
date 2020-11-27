@@ -1,0 +1,30 @@
+:root {
+    --white-color: floralwhite;
+    --orange-color: #f3aa51;
+    --gray-color: gray;
+}
+
+.post_area {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.post_header {
+    display: flex;
+    height: 60px;
+}
+
+.title {
+    margin-left: 14px;
+    margin-right: 20px;
+}
+
+.more {
+    font-size: small;
+    color: darkgray;
+    line-height: 60px;
+}
+
+.more:hover {
+    text-decoration: underline;
+}
