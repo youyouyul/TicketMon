@@ -1,11 +1,11 @@
 import React from 'react'
 
-function AuthPage() {
+function AdminMgmt({type}) {
     return (
         <div>
-            
+            AdminMgmt
         </div>
     )
 }
 
-export default AuthPage
+export default AdminMgmt
