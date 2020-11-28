@@ -69,7 +69,7 @@ memberSchema.statics.findByToken = function(token, callback) {
     jwt.verify(token, 'secretToken', function(err, decoded) {
         member.findOne({"_id": decoded, "token": token }, function(err, member) {
             if (err) return callback(err)
-            callback(member)
+            callback(null, member)
         })
     })
 
